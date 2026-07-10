@@ -419,6 +419,60 @@
       justify-content: flex-end;
     }
 
+    .contact-form {
+      display: grid;
+      gap: 16px;
+      max-width: 520px;
+    }
+
+    .contact-form label {
+      display: grid;
+      gap: 6px;
+    }
+
+    .contact-form label span {
+      color: var(--soft);
+      font-size: 0.82rem;
+      font-weight: 750;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 11px 13px;
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--ink);
+      font: inherit;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: rgba(68, 194, 168, 0.8);
+      background: rgba(68, 194, 168, 0.06);
+    }
+
+    .contact-form button {
+      justify-self: start;
+      cursor: pointer;
+    }
+
+    .project-media {
+      width: calc(100% + 48px);
+      margin: -24px -24px 18px;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+      display: block;
+    }
+
     @media (max-width: 880px) {
       .hero {
         min-height: 82svh;
@@ -532,20 +586,21 @@
 
       <div class="project-grid">
         <article class="project-card">
-          <h3>The Conservatory Hunt</h3>
+          <h3>History in Bloom</h3>
           <p>
-            A narrative-driven scavenger hunt blending archival research and historical timelines with physical puzzle mechanics for a seamless, location-based immersive experience.
+            A commissioned, ticketed location-based immersive experience for the <strong>Conservatory of Flowers</strong> and <strong>KQED</strong>, built with a four-person team under <strong>Urban Replay</strong>. Blends archival research and historical timelines with physical puzzle mechanics for a seamless, self-guided narrative hunt.
           </p>
           <footer>
+            <span class="tag">Client Work</span>
             <span class="tag">Narrative Design</span>
             <span class="tag">Physical Puzzles</span>
           </footer>
         </article>
 
         <article class="project-card">
-          <h3>Magnetic Sliding Cube Matrix</h3>
+          <h3>LEXACUBE</h3>
           <p>
-            A custom-engineered 12-cube sliding game prototype using unipolar analog Hall effect sensors and neodymium magnets for error-tolerant grid identification.
+            A custom-engineered word game of six smart cubes (up to twelve in two-player mode), using unipolar analog Hall effect sensors and neodymium magnets for error-tolerant grid identification.
           </p>
           <footer>
             <span class="tag">Hardware</span>
@@ -554,13 +609,13 @@
         </article>
 
         <article class="project-card">
-          <h3>Secret Knock Puzzle Box</h3>
+          <h3>Knocked Music</h3>
           <p>
-            An interactive wooden chest prop integrating piezo sensors and custom circuitry to detect rhythmic knock patterns and trigger an electromechanical solenoid latch.
+            A knock-driven music game that turns rhythmic taps into sound through piezo sensing and custom circuitry.
           </p>
           <footer>
             <span class="tag">Sensors</span>
-            <span class="tag">Electromechanics</span>
+            <span class="tag">Music</span>
           </footer>
         </article>
       </div>
@@ -586,7 +641,6 @@
             <h3>Fabrication</h3>
             <ul>
               <li>Onshape, OpenSCAD, and parametric modeling</li>
-              <li>Python-driven CAD with CadQuery</li>
               <li>Advanced multi-axis slicing and enclosure design</li>
             </ul>
           </section>
@@ -678,9 +732,37 @@
         </div>
       </div>
     </section>
+    <section class="section" id="contact">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Let's build something.</h2>
+        </div>
+        <p>Available for immersive experience, puzzle, and interactive-hardware work. Send a note and I'll get back to you.</p>
+      </div>
+
+      <form action="https://formspree.io/f/mdarqbep" method="POST" class="contact-form">
+        <!-- Honeypot: hidden from humans, tempting to bots. Formspree discards any submission where this is filled. -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <input type="hidden" name="_subject" value="Portfolio inquiry — stephen5ng.github.io">
+        <button type="submit" class="button primary">Send message</button>
+      </form>
+    </section>
   </main>
 
-  <footer class="site-footer" id="contact">
+  <footer class="site-footer">
     <div class="footer-inner">
       <p>Stephen Ng · Maker & Experience Architect</p>
       <div class="footer-links">
