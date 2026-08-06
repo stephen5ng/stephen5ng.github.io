@@ -87,7 +87,7 @@
 
     .hero {
       position: relative;
-      min-height: 72svh;
+      min-height: 52svh;
       display: grid;
       align-items: center;
       overflow: clip;
@@ -100,7 +100,7 @@
     .hero-inner {
       width: min(100% - 32px, var(--max));
       margin: 0 auto;
-      padding: 104px 0 72px;
+      padding: 104px 0 48px;
     }
 
     .eyebrow {
@@ -139,15 +139,9 @@
 
     .hero-copy {
       max-width: 650px;
+      margin-bottom: 0;
       color: rgba(247, 242, 232, 0.82);
       font-size: clamp(1.05rem, 2.1vw, 1.35rem);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 34px;
     }
 
     .button {
@@ -205,8 +199,7 @@
       letter-spacing: 0;
     }
 
-    .section-heading p,
-    .about-copy {
+    .section-heading p {
       color: var(--muted);
       font-size: 1.02rem;
     }
@@ -256,143 +249,6 @@
       color: #9ae1d2;
       font-size: 0.78rem;
       font-weight: 750;
-    }
-
-    .capability-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.4fr);
-      gap: 44px;
-      align-items: start;
-    }
-
-    .capability-lede {
-      position: sticky;
-      top: 24px;
-    }
-
-    .capability-lede p {
-      color: var(--muted);
-    }
-
-    .signal-list {
-      display: grid;
-      gap: 10px;
-      margin-top: 24px;
-    }
-
-    .signal {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      color: var(--soft);
-      font-size: 0.92rem;
-    }
-
-    .signal::before {
-      content: "";
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: var(--gold);
-      box-shadow: 0 0 0 4px rgba(217, 164, 65, 0.12);
-      flex: 0 0 auto;
-    }
-
-    .capability-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .capability {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 22px;
-      background: rgba(255, 255, 255, 0.03);
-    }
-
-    .capability h3 {
-      margin-bottom: 12px;
-      color: #ffffff;
-      font-size: 1.05rem;
-      letter-spacing: 0;
-    }
-
-    .capability ul {
-      display: grid;
-      gap: 8px;
-      margin: 0;
-      padding-left: 1.1rem;
-      color: var(--muted);
-    }
-
-    .process {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 1px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--line);
-    }
-
-    .process-step {
-      min-height: 220px;
-      padding: 22px;
-      background: #151917;
-    }
-
-    .process-step span {
-      display: block;
-      margin-bottom: 36px;
-      color: var(--accent-strong);
-      font-size: 0.82rem;
-      font-weight: 850;
-    }
-
-    .process-step h3 {
-      margin-bottom: 10px;
-      font-size: 1.05rem;
-    }
-
-    .process-step p {
-      margin-bottom: 0;
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    .about {
-      display: grid;
-      grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
-      gap: 40px;
-      align-items: start;
-    }
-
-    .about-copy p:last-child {
-      margin-bottom: 0;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .stat {
-      border-left: 3px solid var(--accent);
-      padding: 6px 0 6px 16px;
-    }
-
-    .stat strong {
-      display: block;
-      color: #fff;
-      font-size: 1.4rem;
-      line-height: 1.1;
-    }
-
-    .stat span {
-      color: var(--soft);
-      font-size: 0.9rem;
     }
 
     .site-footer {
@@ -481,26 +337,19 @@
 
     @media (max-width: 880px) {
       .hero {
-        min-height: 64svh;
+        min-height: 46svh;
       }
 
       .nav-links {
         gap: 12px;
       }
 
-      .section-heading,
-      .capability-layout,
-      .about {
+      .section-heading {
         grid-template-columns: 1fr;
       }
 
-      .project-grid,
-      .process {
+      .project-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .capability-lede {
-        position: static;
       }
     }
 
@@ -514,7 +363,7 @@
       }
 
       .hero {
-        min-height: 60svh;
+        min-height: 42svh;
       }
 
       .hero-inner {
@@ -525,19 +374,12 @@
         padding: 54px 0;
       }
 
-      .project-grid,
-      .capability-grid,
-      .process,
-      .stats {
+      .project-grid {
         grid-template-columns: 1fr;
       }
 
       .project-card {
         min-height: 260px;
-      }
-
-      .process-step {
-        min-height: 178px;
       }
 
       .footer-inner {
@@ -558,8 +400,6 @@
     <a class="brand" href="#top" aria-label="Stephen Ng home">Stephen Ng</a>
     <ul class="nav-links">
       <li><a href="#projects">Builds</a></li>
-      <li><a href="#capabilities">Capabilities</a></li>
-      <li><a href="#process">Process</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -569,12 +409,8 @@
       <p class="eyebrow">Maker & Experience Architect</p>
       <h1>Stephen Ng</h1>
       <p class="hero-copy">
-        I design and build immersive interactive hardware, mechanically complex puzzle enclosures, and narrative-driven games that bridge physical craft with digital logic.
+        Interactive hardware and narrative-driven games that bridge physical craft with digital logic.
       </p>
-      <div class="hero-actions" aria-label="Portfolio actions">
-        <a class="button primary" href="#projects">View Builds</a>
-        <a class="button" href="https://github.com/stephen5ng">GitHub</a>
-      </div>
     </div>
   </header>
 
@@ -582,7 +418,6 @@
     <section class="section" id="projects">
       <div class="section-heading">
         <h2>Featured Builds</h2>
-        <p>Selected work across puzzle design, embedded sensing, electromechanical props, and location-based storytelling.</p>
       </div>
 
       <div class="project-grid">
@@ -665,124 +500,9 @@
       </div>
     </section>
 
-    <section class="section" id="capabilities">
-      <div class="capability-layout">
-        <div class="capability-lede">
-          <p class="eyebrow">Capabilities</p>
-          <h2>From concept to functioning artifact.</h2>
-          <p>
-            I work comfortably across the stack: design intent, CAD, fabrication, embedded sensing, game logic, installation details, and the human experience around the object.
-          </p>
-          <div class="signal-list" aria-label="Maker strengths">
-            <span class="signal">Physical-digital interaction design</span>
-            <span class="signal">Rapid prototype iteration</span>
-            <span class="signal">Puzzle-first systems thinking</span>
-          </div>
-        </div>
-
-        <div class="capability-grid">
-          <section class="capability">
-            <h3>Fabrication</h3>
-            <ul>
-              <li>Onshape, OpenSCAD, and parametric modeling</li>
-              <li>Advanced multi-axis slicing and enclosure design</li>
-            </ul>
-          </section>
-
-          <section class="capability">
-            <h3>Electronics</h3>
-            <ul>
-              <li>ESP32 and Raspberry Pi prototyping</li>
-              <li>Custom PCB design and sensor integration</li>
-              <li>RS-485 serial networks for distributed props</li>
-            </ul>
-          </section>
-
-          <section class="capability">
-            <h3>Game Systems</h3>
-            <ul>
-              <li>Interactive game mechanics and state machines</li>
-              <li>Social deduction and logic puzzle analysis</li>
-              <li>Player flow, hinting, and difficulty tuning</li>
-            </ul>
-          </section>
-
-          <section class="capability">
-            <h3>Experience Design</h3>
-            <ul>
-              <li>Immersive scavenger hunt structure</li>
-              <li>Historical research and narrative integration</li>
-              <li>Durable props for repeated real-world play</li>
-            </ul>
-          </section>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="process">
-      <div class="section-heading">
-        <h2>Build Process</h2>
-        <p>Practical, iterative, and grounded in whether the object can survive real players using it in the wild.</p>
-      </div>
-
-      <div class="process">
-        <section class="process-step">
-          <span>01</span>
-          <h3>Frame the experience</h3>
-          <p>Define what the player should notice, infer, manipulate, and feel before choosing the mechanism.</p>
-        </section>
-
-        <section class="process-step">
-          <span>02</span>
-          <h3>Prototype the interaction</h3>
-          <p>Test sensing, tolerances, feedback, and failure cases early with low-friction hardware.</p>
-        </section>
-
-        <section class="process-step">
-          <span>03</span>
-          <h3>Engineer the enclosure</h3>
-          <p>Turn the interaction into a durable object with service access, cable management, and repeatable assembly.</p>
-        </section>
-
-        <section class="process-step">
-          <span>04</span>
-          <h3>Tune for humans</h3>
-          <p>Playtest timing, affordances, reliability, and puzzle clarity until the build feels intentional.</p>
-        </section>
-      </div>
-    </section>
-
-    <section class="section about" id="about">
-      <div>
-        <p class="eyebrow">About</p>
-        <h2>Logic, hardware, and play.</h2>
-      </div>
-      <div class="about-copy">
-        <p>
-          I'm a game developer and creative service provider who thrives at the intersection of logic, hardware, and experiential design. My background pairs an MIT education and software engineering at Google with hands-on fabrication and puzzle craft.
-</p>
-        <p>
-          I enjoy all escape rooms from terrible to TERPECA, and losing at <em>Blood on the Clocktower</em>.
-        </p>
-        <div class="stats" aria-label="Experience highlights">
-          <div class="stat">
-            <strong>Physical</strong>
-            <span>Props, puzzles, mechanisms, and enclosures</span>
-          </div>
-          <div class="stat">
-            <strong>Digital</strong>
-            <span>Embedded control, game logic, and tooling</span>
-          </div>
-        </div>
-      </div>
-    </section>
     <section class="section" id="contact">
       <div class="section-heading">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2>Let's build something.</h2>
-        </div>
-        <p>Available for immersive experience, puzzle, and interactive-hardware work. Send a note and I'll get back to you.</p>
+        <p class="eyebrow">Contact</p>
       </div>
 
       <form action="https://formspree.io/f/mdarqbep" method="POST" class="contact-form">
@@ -811,6 +531,8 @@
       <p>Stephen Ng · Maker & Experience Architect</p>
       <div class="footer-links">
         <a href="https://github.com/stephen5ng">GitHub</a>
+        <a href="https://www.facebook.com/stephen.ng.94695/">Facebook</a>
+        <a href="https://www.instagram.com/stephen5.ng/">Instagram</a>
         <a href="#top">Back to top</a>
       </div>
     </div>
