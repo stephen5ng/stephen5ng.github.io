@@ -261,6 +261,46 @@
       font-size: 0.82rem;
     }
 
+    .writing-list {
+      display: grid;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      max-width: 760px;
+    }
+
+    .writing-list li {
+      padding: 20px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .writing-list li:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .writing-list h3 {
+      margin-bottom: 6px;
+      font-size: 1.2rem;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .writing-list h3 a {
+      text-decoration: none;
+    }
+
+    .writing-list h3 a:hover {
+      text-decoration: underline;
+      text-decoration-color: rgba(68, 194, 168, 0.55);
+    }
+
+    .writing-list p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
     .contact-form {
       display: grid;
       gap: 16px;
@@ -387,6 +427,7 @@
     <a class="brand" href="#top" aria-label="Stephen Ng home">Stephen Ng</a>
     <ul class="nav-links">
       <li><a href="#projects">Builds</a></li>
+      <li><a href="#writing">Writing</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -454,7 +495,7 @@
           </p>
           <p class="project-link">
             <a href="https://knockstrip.vercel.app/">Play the browser version &rarr;</a>
-            <span class="link-note">password: pursuit</span>
+            <span class="link-note">&ldquo;pursuit&rdquo;</span>
           </p>
         </article>
 
@@ -466,6 +507,27 @@
           </p>
         </article>
       </div>
+    </section>
+
+    <section class="section" id="writing">
+      <div class="section-heading">
+        <h2>Writing</h2>
+      </div>
+
+      <ul class="writing-list">
+        <li>
+          <h3><a href="https://medium.com/@stephenng/rescue-opportunity-d39b57d85b2c?sk=7945bdda1b495d6328aa5e4005553f69">Rescue Opportunity</a></h3>
+          <p>My experience as a participant &mdash; not a designer &mdash; at Caravan Rally, the previous incarnation of Adventure Camp.</p>
+        </li>
+        <li>
+          <h3><a href="https://medium.com/@stephenng/escape-rooms-that-end-1832cd1457d2?sk=df7ebc834225b5ea7db8603dd07cc3a2">Escape Rooms That End</a></h3>
+          <p>An essay on beginnings, middles, and endings in escape room design.</p>
+        </li>
+        <li>
+          <h3><a href="https://medium.com/@stephenng/in-praise-of-ghost-patrol-32f6de882d5e">In Praise of Ghost Patrol</a></h3>
+          <p>A 2021 review of the game Ghost Patrol.</p>
+        </li>
+      </ul>
     </section>
 
     <section class="section" id="contact">
