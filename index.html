@@ -238,6 +238,29 @@
       margin-bottom: 0;
     }
 
+    .project-link {
+      margin-top: auto;
+      padding-top: 14px;
+      font-size: 0.94rem;
+      font-weight: 750;
+    }
+
+    .project-link a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .project-link a:hover {
+      text-decoration: underline;
+    }
+
+    .link-note {
+      margin-left: 8px;
+      color: var(--soft);
+      font-weight: 400;
+      font-size: 0.82rem;
+    }
+
     .contact-form {
       display: grid;
       gap: 16px;
@@ -418,6 +441,9 @@
           <p>
             A custom-engineered word game of six smart cubes (up to twelve in two-player mode), using unipolar analog Hall effect sensors and neodymium magnets for error-tolerant grid identification. Winner of an <strong>Editors&rsquo; Choice</strong> award at Bay Area Maker Faire 2025, and played at Burning Man, unSCruz, Neotropolis (shown here), and El Cerrito Preschool Cooperative&rsquo;s &ldquo;ECPC After Dark&rdquo; fundraiser.
           </p>
+          <p class="project-link">
+            <a href="https://lexacube.vercel.app/">Play the browser version &rarr;</a>
+          </p>
         </article>
 
         <article class="project-card">
@@ -425,6 +451,10 @@
           <h3>Eine Kleine Knock Music</h3>
           <p>
             A multiplayer rhythm game: players knock in time with a 300-LED chase strip that streams the beat down a line of stations. Custom-encoded songs scatter beats across the stations for coordinated call-and-response, scored on timing accuracy &mdash; all driven by a Raspberry Pi and piezo-sensing ESP32 nodes on an RS-485 bus. Shown here in play at the <a href="https://sfpursuit.org">SF Pursuit</a> scavenger hunt, where over 800 people played it across a single weekend.
+          </p>
+          <p class="project-link">
+            <a href="https://knockstrip.vercel.app/">Play the browser version &rarr;</a>
+            <span class="link-note">password: pursuit</span>
           </p>
         </article>
 
